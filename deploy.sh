@@ -1,0 +1,1 @@
+cd /Users/edy/Downloads/prompt-engineering-note-main/docs  && scp -r ./* root@tm:/var/www/study/.
