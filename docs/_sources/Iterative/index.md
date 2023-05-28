@@ -1,4 +1,4 @@
-#  3.提示工程需要迭代
+# 3.提示工程需要迭代
 
 ---
 
@@ -35,13 +35,12 @@ This too is why I personally have not paid as much attention to the internet art
 
 这也是为什么我个人没有过多关注互联网文章中的“30个完美提示”的原因，因为我认为可能没有适用于所有情况的完美提示。开发一个适用于您特定应用程序的好提示的流程比任何其他事情都更重要。
 
-
-
 ```
 So let's look at an example together in code. I have here the starter code that you saw in the previous videos, have been port open
 ```
 
-让我们一起在代码示例中看一个例子。这里是你在之前视频中看到的入门代码，已经将其转移到了open AI 和OS。这里我们获取了open AI API密钥，这是与上一次相同的帮助器函数。在本视频中，我将使用概括椅子信息单的任务作为运行示例。让我将它粘贴到这里。如果您想要更仔细地阅读，请随时暂停左侧笔记本中的视频并仔细阅读。但是这是一张关于一把椅子的信息单，其中描述说它是一个美丽的中世纪灵感家庭的一部分，等等。
+让我们一起在代码示例中看一个例子。这里是你在之前视频中看到的入门代码，已经将其转移到了open AI 和OS。这里我们获取了open AI
+API密钥，这是与上一次相同的帮助器函数。在本视频中，我将使用概括椅子信息单的任务作为运行示例。让我将它粘贴到这里。如果您想要更仔细地阅读，请随时暂停左侧笔记本中的视频并仔细阅读。但是这是一张关于一把椅子的信息单，其中描述说它是一个美丽的中世纪灵感家庭的一部分，等等。
 
 ![3-1](./img/3-1.png)
 
@@ -54,8 +53,6 @@ Talks about the construction, has the dimensions, options for the chair, materia
 介绍了椅子的制造方式、尺寸、选项、材料等问题。这款椅子来自意大利。假设你想拿这张信息单来帮助营销团队编写一个在线零售网址的描述，像这样……我将它粘贴进来，所以我的提示是：您的任务是基于技术信息单，帮助营销团队为零售网站或产品创建描述，撰写产品描述等。对吧？这是我第一次尝试向大型语言模型解释这个任务。所以，我按下Shift+Enter，这需要几秒钟的时间来运行，我们得到了这个结果。它看起来做得很好，写了一个描述，介绍了一个令人惊叹的中世纪灵感办公椅，完美的版本等等，但当我看到这个结果时，我会说，哇，这真的很长。它做得非常好，准确地完成了我所要求的工作，也就是从技术信息单入手撰写产品描述。
 
 ![3-1](./img/3-3.png)
-
-
 
 ## 3.2 Issue 1: 文本过长
 
@@ -77,7 +74,9 @@ But when I look at this, I go, this is kind of long. Maybe we want it to be a li
 But these are different ways to tell the large-language model what's the length of the output that you want. So this is one, two, three. I count these sentences. Looks like I did a pretty good job. And then I've also seen people sometimes do things like, I don't know, use at most 280 characters. Large-language models, because of the way they interpret text, using something called a tokenizer, which I won't talk about. But they tend to be so-so at counting characters. But let's see, 281 characters. It's actually surprisingly close. Usually a large-language model doesn't get it quite this close. But these are different ways they can play with to try to control the length of the output that you get. But then just switch it back to use at most 50 words. And that's that result that we had just now. As we continue to refine this text for our website, we might decide that, boy, this website isn't selling direct to consumers, it's actually intended to sell furniture to furniture retailers that would be more interested in the technical details of the chair and the materials of the chair. 
 ```
 
-但是这些是告诉大型语言模型你想要的输出长度的不同方式。所以这是一种，两种，三种。我数了一下这些句子。看起来我做得相当不错。然后我还看到有人有时会做一些事情，比如说，不知道，最多使用280个字符。大型语言模型，由于它们解释文本的方式，使用一种称为**分词器**的东西，我不会讲。但是它们倾向于在计算字符数量方面表现一般。但是，看看281个字符。这实际上相当接近。通常情况下，大型语言模型不太可能准确预测长度。但这些是他们可以玩耍的不同方式，以尝试控制您获得的输出长度。但是，只需将其切换回最多使用50个单词即可。那就是我们刚才得到的结果。随着我们继续为网站完善这段文本，我们可能会决定，哇，这个网站并不是直接面向消费者销售，实际上是旨在向家具零售商销售家具，他们更关注椅子的技术细节和椅子的材料。
+但是这些是告诉大型语言模型你想要的输出长度的不同方式。所以这是一种，两种，三种。我数了一下这些句子。看起来我做得相当不错。然后我还看到有人有时会做一些事情，比如说，不知道，最多使用280个字符。大型语言模型，由于它们解释文本的方式，使用一种称为
+**分词器**
+的东西，我不会讲。但是它们倾向于在计算字符数量方面表现一般。但是，看看281个字符。这实际上相当接近。通常情况下，大型语言模型不太可能准确预测长度。但这些是他们可以玩耍的不同方式，以尝试控制您获得的输出长度。但是，只需将其切换回最多使用50个单词即可。那就是我们刚才得到的结果。随着我们继续为网站完善这段文本，我们可能会决定，哇，这个网站并不是直接面向消费者销售，实际上是旨在向家具零售商销售家具，他们更关注椅子的技术细节和椅子的材料。
 
 ![3-4](./img/3-5.png)
 
@@ -85,11 +84,10 @@ But these are different ways to tell the large-language model what's the length 
 In that case, you can take this prompt and say, I want to modify this prompt to get it to be more precise about the technical details. So let me keep on modifying this prompt. And I'm going to say, this description is intended for furniture retailers, so it should be technical and focus on materials, products and constructs it from. Well, let's run that. And let's see. Not bad. It says, coated aluminum base and pneumatic chair. High-quality materials. So by changing the prompt, you can get it to focus more on specific characters, on specific characteristics you want it to. And when I look at this, I might decide, hmm, at the end of the description, I also wanted to include the product ID. So the two offerings of this chair, SWC 110, SOC 100. 
 ```
 
-在这种情况下，您可以采取这个提示并说，我想修改这个提示，使其更加精确地描述技术细节。所以让我继续修改这个提示。我会说，这种描述是为家具零售商而设计的，因此它应该是技术性的，重点是材料、产品和构造。嗯，让我们运行一下。让我们看看。还不错。它说，铝制底座和气动椅。高质量的材料。所以通过改变提示，您可以使其更加专注于您想要的特定特征。当我看到这个时，我可以决定，在描述的末尾，我也想包括产品ID。所以这把椅子有两种款式，其中 SWC 110 和 SOC 100 。
+在这种情况下，您可以采取这个提示并说，我想修改这个提示，使其更加精确地描述技术细节。所以让我继续修改这个提示。我会说，这种描述是为家具零售商而设计的，因此它应该是技术性的，重点是材料、产品和构造。嗯，让我们运行一下。让我们看看。还不错。它说，铝制底座和气动椅。高质量的材料。所以通过改变提示，您可以使其更加专注于您想要的特定特征。当我看到这个时，我可以决定，在描述的末尾，我也想包括产品ID。所以这把椅子有两种款式，其中
+SWC 110 和 SOC 100 。
 
 ![3-6](./img/3-6.png)
-
-
 
 ## 3.3 Issue 3. 描述需要一个规模表
 
@@ -105,13 +103,17 @@ So maybe I can further improve this prompt. And to get it to give me the product
 And I think a guideline is, in the last video, you saw Yisa share a number of best practices. And so what I usually do is keep best practices like that in mind, be clear and specific, and if necessary, give the model time to think. With those in mind, it's worthwhile to often take a first attempt at writing a prompt, see what happens, and then go from there to iteratively refine the prompt to get closer and closer to the result that you need. 
 ```
 
-我认为一项指南是，您在上一个视频中看到 Yisa 分享了许多最佳实践。所以我通常会记住这些最佳实践，清晰明确，并在必要时给模型一些时间来思考。考虑到这些因素，经常首先尝试编写提示，查看结果，然后逐步完善提示，以尽可能接近您需要的结果，这是值得的。
+我认为一项指南是，您在上一个视频中看到 Yisa
+分享了许多最佳实践。所以我通常会记住这些最佳实践，清晰明确，并在必要时给模型一些时间来思考。考虑到这些因素，经常首先尝试编写提示，查看结果，然后逐步完善提示，以尽可能接近您需要的结果，这是值得的。
 
 ```
 And so a lot of the successful prompts that you may see used in various programs was arrived at an iterative process like this. Just for fun, let me show you an example of an even more complex prompt that might give you a sense of what ChatGPT can do, which is I've just added a few extra instructions here. After description, include a table that gives the product dimensions, and then you'll format everything as HTML. So let's run that. And in practice, you would end up with a prompt like this, really only after multiple iterations. I don't think I know anyone that would write this exact prompt the first time they were trying to get the system to process a fact sheet. And so this actually outputs a bunch of HTML. 
 ```
 
-所以，您可能在各种项目中看到的许多成功提示都是通过这样的迭代过程得出的。仅出于好奇，让我给您展示一个更复杂的提示示例，这可能会让您了解 ChatGPT 能做什么。我只是在这里添加了一些额外的指令。在描述后，包括一个给出产品尺寸的表格，然后将所有内容格式化为 HTML。那么让我们运行一下。在实践中，您只有在多次迭代后才能最终得到这样的提示。我不认为有人会在第一次尝试处理事实表时就写出这个精确的提示。因此，这实际上会输出一堆 HTML。
+所以，您可能在各种项目中看到的许多成功提示都是通过这样的迭代过程得出的。仅出于好奇，让我给您展示一个更复杂的提示示例，这可能会让您了解
+ChatGPT 能做什么。我只是在这里添加了一些额外的指令。在描述后，包括一个给出产品尺寸的表格，然后将所有内容格式化为
+HTML。那么让我们运行一下。在实践中，您只有在多次迭代后才能最终得到这样的提示。我不认为有人会在第一次尝试处理事实表时就写出这个精确的提示。因此，这实际上会输出一堆
+HTML。
 
 ![3-7-2](./img/3-7-2.png)
 

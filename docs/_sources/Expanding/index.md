@@ -1,4 +1,4 @@
-#  7.扩展类应用
+# 7.扩展类应用
 
 ---
 
@@ -29,7 +29,8 @@ So when you use these capabilities of a large language model, please use it only
 We're also going to use another one of the models input parameters called temperature and this kind of allows you to vary the kind of degree of exploration and variety in the kind of models responses. So let's get into it. So before we get started we're going to kind of do the usual setup. So set up the OpenAI Python package and then also define our helper function getCompletion and now we're going to write a custom email response to a customer review and so given a customer review and the sentiment we're going to generate a custom response. 
 ```
 
-我们还将使用模型的另一个输入参数，称为温度，这允许你变化模型响应的探索程度和多样性的程度。所以让我们开始吧。在我们开始之前，我们将进行通常的设置。因此，设置OpenAI Python包，然后定义我们的助手函数getCompletion，现在我们要编写一个针对客户评论的自定义电子邮件响应，因此，鉴于客户评论和情感，我们将生成一个自定义响应。
+我们还将使用模型的另一个输入参数，称为温度，这允许你变化模型响应的探索程度和多样性的程度。所以让我们开始吧。在我们开始之前，我们将进行通常的设置。因此，设置OpenAI
+Python包，然后定义我们的助手函数getCompletion，现在我们要编写一个针对客户评论的自定义电子邮件响应，因此，鉴于客户评论和情感，我们将生成一个自定义响应。
 
 ![7-2](./imgs/7-2.png)
 
@@ -53,7 +54,8 @@ If the sentiment is positive or neutral thank them for their review. If the sent
 And so, here we have a response to the customer. It kind of addresses details that the customer mentioned in their review. And kind of as we instructed, suggests that they reach out to customer service because this is just an AI customer service agent. Next, we're going to use a parameter of the language model called temperature that will allow us to change the kind of variety of the model's responses. So you can kind of think of temperature as the degree of exploration or kind of randomness of the model. And so, for this particular phrase, my favourite food is the kind of most likely next word that the model predicts is pizza and the kind of next to most likely it suggests are sushi and tacos. 
 ```
 
-因此，我们给客户做出了回复。回复也解决了客户在评论中提到的细节问题，并且像我们指示的那样建议他们联系客户服务，因为这只是一个AI客户服务代理。接下来，我们将使用语言模型的一个参数称为“**温度**”，这将允许我们改变模型回答的多样性。因此，您可以将温度看作是模型探索程度或随机性的程度。对于这个特定短语，“我最喜欢的食物”是模型预测的下一个最有可能的词是“比萨”，第二个可能是“寿司”和“塔可”。
+因此，我们给客户做出了回复。回复也解决了客户在评论中提到的细节问题，并且像我们指示的那样建议他们联系客户服务，因为这只是一个AI客户服务代理。接下来，我们将使用语言模型的一个参数称为“
+**温度**”，这将允许我们改变模型回答的多样性。因此，您可以将温度看作是模型探索程度或随机性的程度。对于这个特定短语，“我最喜欢的食物”是模型预测的下一个最有可能的词是“比萨”，第二个可能是“寿司”和“塔可”。
 
 ```
 And so, at a temperature of zero, the model will always choose the most likely next word, which in this case is pizza, and at a higher temperature, it will kind of also choose one of the less likely words and at an even higher temperature, it might even choose tacos, which only kind of has a five percent chance of being chosen. And you can imagine that kind of, as the model continues this final response, so my favourite food is pizza and it kind of continues to generate more words, this response will kind of diverge from the response, the first response, which is my favourite food is tacos. 

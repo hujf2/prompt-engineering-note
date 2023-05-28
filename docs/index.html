@@ -1,42 +1,45 @@
-
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/"/>
 
     <title>prompt-engineering-note &#8212; 提示工程笔记</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+    <script data-cfasync="false">
+        document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+        document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    </script>
+
+    <!-- Loaded before other Sphinx assets -->
+    <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet"/>
+    <link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet"/>
+    <link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet"/>
+
+
+    <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2"/>
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css"/>
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css"/>
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css"/>
+
+    <!-- Pre-loaded scripts that we'll load fully later -->
+    <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"/>
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"/>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -46,582 +49,772 @@
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="shortcut icon" href="_static/panda.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1.课程简介" href="Introduction/index.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+    <link rel="index" title="Index" href="genindex.html"/>
+    <link rel="search" title="Search" href="search.html"/>
+    <link rel="next" title="1.课程简介" href="Introduction/index.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="docsearch:language" content="en"/>
+</head>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
+
+<body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%"
+      data-default-mode="">
+
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<input type="checkbox"
+       class="sidebar-toggle"
+       name="__primary"
+       id="__primary"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+
+<input type="checkbox"
+       class="sidebar-toggle"
+       name="__secondary"
+       id="__secondary"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+
+<div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
+        <form class="bd-search d-flex align-items-center"
+              action="search.html"
+              method="get">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search"
+                   class="form-control"
+                   name="q"
+                   id="search-input"
+                   placeholder="Search..."
+                   aria-label="Search..."
+                   autocomplete="off"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   spellcheck="false"/>
+            <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+        </form>
+    </div>
+</div>
+
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
+</nav>
+
+<div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
 
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="#">
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Introduction/index.html">1.课程简介</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Guidelines/index.html">2.提示工程关键原则</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Iterative/index.html">3.提示工程需要迭代</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Summarizing/index.html">4.总结类应用</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Inferring/index.html">5.推理类应用</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Transforming/index.html">6.转换类应用</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Expanding/index.html">7.扩展类应用</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chatbot/index.html">8.打造聊天机器人</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Conclusion/index.html">9.课程总结</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="projects/index.html">10.projects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">11.apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Painting_Commercial_Monetization_Course-Masterclass/index.html">12.AI绘画商业变现课</a></li>
-</ul>
-
-    </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+        <div class="bd-sidebar-primary bd-sidebar">
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
+            <div class="sidebar-header-items sidebar-primary__section">
 
 
+            </div>
+
+            <div class="sidebar-primary-items__start sidebar-primary__section">
+                <div class="sidebar-primary-item">
 
 
+                    <a class="navbar-brand logo" href="#">
 
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/hujf2/prompt-engineering-note" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
+
+                        <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+                        <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+
+
+                    </a></div>
+                <div class="sidebar-primary-item">
+                    <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+                        <div class="bd-toc-item navbar-nav active">
+                            <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+                            <ul class="nav bd-sidenav">
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Introduction/index.html">1.课程简介</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Guidelines/index.html">2.提示工程关键原则</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Iterative/index.html">3.提示工程需要迭代</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Summarizing/index.html">4.总结类应用</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Inferring/index.html">5.推理类应用</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Transforming/index.html">6.转换类应用</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Expanding/index.html">7.扩展类应用</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Chatbot/index.html">8.打造聊天机器人</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1 has-children"><a class="reference internal"
+                                                                       href="Conclusion/index.html">9.课程总结</a><input
+                                        class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9"
+                                        type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i
+                                        class="fa-solid fa-chevron-down"></i></label>
+                                    <ul class="simple">
+                                    </ul>
+                                </li>
+                                <li class="toctree-l1"><a class="reference internal" href="projects/index.html">10.projects</a>
+                                </li>
+                                <li class="toctree-l1"><a class="reference internal" href="apps/index.html">11.apps</a>
+                                </li>
+                                <li class="toctree-l1"><a class="reference internal"
+                                                          href="AI_Painting_Commercial_Monetization_Course-Masterclass/index.html">12.AI绘画商业变现课</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="sidebar-primary-items__end sidebar-primary__section">
+            </div>
+
+            <div id="rtd-footer-container"></div>
+
+
+        </div>
+
+        <main id="main-content" class="bd-main">
+
+
+            <div class="sbt-scroll-pixel-helper"></div>
+
+            <div class="bd-content">
+                <div class="bd-article-container">
+
+                    <div class="bd-header-article">
+                        <div class="header-article-items header-article__inner">
+
+                            <div class="header-article-items__start">
+
+                                <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm"
+                                                                        for="__primary" title="Toggle primary sidebar"
+                                                                        data-bs-placement="bottom"
+                                                                        data-bs-toggle="tooltip">
+                                    <span class="fa-solid fa-bars"></span>
+                                </label></div>
+
+                            </div>
+
+
+                            <div class="header-article-items__end">
+
+                                <div class="header-article-item">
+
+                                    <div class="article-header-buttons">
+
+
+                                        <div class="dropdown dropdown-source-buttons">
+                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="Source repositories">
+                                                <i class="fab fa-github"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+
+
+                                                <li><a href="https://github.com/hujf2/prompt-engineering-note"
+                                                       target="_blank"
+                                                       class="btn btn-sm btn-source-repository-button dropdown-item"
+                                                       title="Source repository"
+                                                       data-bs-placement="left" data-bs-toggle="tooltip"
+                                                >
   
 
 <span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/hujf2/prompt-engineering-note/edit/main/index.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
+                                                    <span class="btn__text-container">Repository</span>
+                                                </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a href="https://github.com/hujf2/prompt-engineering-note/edit/main/index.md"
+                                                       target="_blank"
+                                                       class="btn btn-sm btn-source-edit-button dropdown-item"
+                                                       title="Suggest edit"
+                                                       data-bs-placement="left" data-bs-toggle="tooltip"
+                                                    >
   
 
 <span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/hujf2/prompt-engineering-note/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
+                                                        <span class="btn__text-container">Suggest edit</span>
+                                                    </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a href="https://github.com/hujf2/prompt-engineering-note/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."
+                                                       target="_blank"
+                                                       class="btn btn-sm btn-source-issues-button dropdown-item"
+                                                       title="Open an issue"
+                                                       data-bs-placement="left" data-bs-toggle="tooltip"
+                                                    >
   
 
 <span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
+                                                        <span class="btn__text-container">Open issue</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
 
 
+                                        <div class="dropdown dropdown-download-buttons">
+                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="Download this page">
+                                                <i class="fas fa-download"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
 
 
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="_sources/index.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
+                                                <li><a href="_sources/index.md" target="_blank"
+                                                       class="btn btn-sm btn-download-source-button dropdown-item"
+                                                       title="Download source file"
+                                                       data-bs-placement="left" data-bs-toggle="tooltip"
+                                                >
   
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
+                                                    <span class="btn__text-container">.md</span>
+                                                </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <button onclick="window.print()"
+                                                            class="btn btn-sm btn-download-pdf-button dropdown-item"
+                                                            title="Print to PDF"
+                                                            data-bs-placement="left" data-bs-toggle="tooltip"
+                                                    >
   
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
+                                                        <span class="btn__text-container">.pdf</span>
+                                                    </button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
 
 
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
+                                        <button onclick="toggleFullScreen()"
+                                                class="btn btn-sm btn-fullscreen-button"
+                                                title="Fullscreen mode"
+                                                data-bs-placement="bottom" data-bs-toggle="tooltip"
+                                        >
   
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
-</button>
+                                        </button>
 
 
-<script>
-document.write(`
+                                        <script>
+                                            document.write(`
   <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
     <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
     <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
-</script>
+                                        </script>
 
-<script>
-document.write(`
+                                        <script>
+                                            document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
+                                        </script>
+                                        <label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"
+                                               title="Toggle secondary sidebar" data-bs-placement="bottom"
+                                               data-bs-toggle="tooltip">
+                                            <span class="fa-solid fa-list"></span>
+                                        </label>
+                                    </div>
+                                </div>
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>prompt-engineering-note</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="jb-print-docs-body" class="onlyprint">
+                        <h1>prompt-engineering-note</h1>
+                        <!-- Table of contents -->
+                        <div id="print-main-content">
+                            <div id="jb-print-toc">
+
+                                <div>
+                                    <h2> Contents </h2>
+                                </div>
+                                <nav aria-label="Page">
+                                    <ul class="visible nav section-nav flex-column">
+                                        <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                                 href="#id1">介绍</a></li>
+                                        <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                                 href="#id2">主要内容</a></li>
+                                        <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                                 href="#id3">致谢</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="searchbox"></div>
+                    <article class="bd-article" role="main">
+
+                        <section id="prompt-engineering-note">
+                            <h1>prompt-engineering-note<a class="headerlink" href="#prompt-engineering-note"
+                                                          title="Permalink to this heading">#</a></h1>
+                            <p><img alt="banner"
+                                    src="https://user-images.githubusercontent.com/59380685/235316290-9a297ce3-ba65-4e66-ae02-f7b62cd42210.png"/>
+                            </p>
+                            <hr class="docutils"/>
+                            <p><img alt="GitHub watchers"
+                                    src="https://img.shields.io/github/watchers/isLinXu/prompt-engineering-note.svg?style=social"/>
+                                <img alt="GitHub stars"
+                                     src="https://img.shields.io/github/stars/isLinXu/prompt-engineering-note.svg?style=social"/>
+                                <img alt="GitHub forks"
+                                     src="https://img.shields.io/github/forks/isLinXu/prompt-engineering-note.svg?style=social"/>
+                                <img alt="GitHub followers"
+                                     src="https://img.shields.io/github/followers/isLinXu.svg?style=social"/>
+                                <a class="reference external"
+                                   href="https://github.com/hujf2/prompt-engineering-note"><img alt="Build Status"
+                                                                                                src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fatrox%2Fsync-dotenv%2Fbadge&amp;style=flat"/></a>
+                                <img alt="img"
+                                     src="https://badgen.net/badge/icon/learning?icon=deepscan&amp;label"/><img
+                                        alt="GitHub repo size"
+                                        src="https://img.shields.io/github/repo-size/isLinXu/prompt-engineering-note.svg?style=flat-square"/>
+                                <img alt="GitHub language count"
+                                     src="https://img.shields.io/github/languages/count/isLinXu/prompt-engineering-note"/>
+                                <img alt="GitHub last commit"
+                                     src="https://img.shields.io/github/last-commit/isLinXu/prompt-engineering-note"/>
+                                <img alt="GitHub"
+                                     src="https://img.shields.io/github/license/isLinXu/prompt-engineering-note.svg?style=flat-square"/><img
+                                        alt="img" src="https://hits.dwyl.com/isLinXu/prompt-engineering-note.svg"/></p>
+                            <ul class="simple">
+                                <li><p>课程视频 -&gt; <a class="reference external"
+                                                         href="https://www.bilibili.com/video/BV1No4y1t7Zn/"><img
+                                        alt="bilibili"
+                                        src="https://img.shields.io/badge/dynamic/json?label=views&amp;style=social&amp;logo=bilibili&amp;query=data.stat.view&amp;url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1vM4y1U7b5"/></a><a
+                                        class="reference external"
+                                        href="https://learn.deeplearning.ai/chatgpt-prompt-eng"><img alt=""
+                                                                                                     src="https://img.shields.io/youtube/views/K0SZ9mdygTw?style=social"/></a>(点击图标即可播放)
+                                </p></li>
+                                <li><p>在线阅读 -&gt; <a class="reference external"
+                                                         href="https://study.chatgptten.com/">https://github.com/hujf2/prompt-engineering-note</a>
+                                </p></li>
+                            </ul>
+                            <section id="id1">
+                                <h2>介绍<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+                                <p>ChatGPT Prompt Engineering Learning Notesfor Developers
+                                    (面向开发者的ChatGPT提问工程学习笔记)</p>
+                                <p>课程简单介绍了语言模型的工作原理，提供了最佳的提示工程实践，并展示了如何将语言模型 API
+                                    应用于各种任务的应用程序中。
+                                    此外，课程里面提供了 Jupyter Notebook 代码实例，可以直接使用 OpenAI 提供的 API Key
+                                    获得结果，所以没有账号也能够进行体验。</p>
+                                <p>在ChatGPT Prompt Engineering for Developers 中，能够学习到如何使用大型语言模型 (LLM)
+                                    快速构建功能强大的新应用程序。使用 OpenAI
+                                    API，您将能够快速构建学习创新和创造价值的能力，而这在以前是成本高昂、技术含量高或根本不可能的。</p>
+                                <p>这个由 <strong>Isa Fulford (OpenAI)</strong> 和 <strong>Andrew Ng
+                                    (DeepLearning.AI)</strong> 教授的短期课程将描述 LLM 的工作原理，提供即时工程的最佳实践，并展示
+                                    LLM API 如何用于各种任务的应用程序，包括：</p>
+                                <ul class="simple">
+                                    <li><p>总结（例如，为简洁起见总结用户评论）</p></li>
+                                    <li><p>推断（例如，情感分类、主题提取）</p></li>
+                                    <li><p>转换文本（例如，翻译、拼写和语法更正）</p></li>
+                                    <li><p>扩展（例如，自动编写电子邮件）</p></li>
+                                </ul>
+                                <p>
+                                    在这个课程中能够学习到，编写有效提示的两个关键原则，即<strong>如何系统地设计好的提示</strong>，并学习<strong>构建自定义聊天机器人</strong>。
+                                </p>
+                                <p>所有概念都通过大量示例进行说明，可以直接在官方的<a class="reference external"
+                                                                                     href="https://s172-31-9-165p16067.lab-aws-production.deeplearning.ai/notebooks/">Jupyter
+                                    notebook环境</a>中使用这些示例，以获得即时工程的实践经验。</p>
+                            </section>
+                            <section id="id2">
+                                <h2>主要内容<a class="headerlink" href="#id2" title="Permalink to this heading">#</a>
+                                </h2>
+                                <div class="toctree-wrapper compound">
+                                    <p aria-level="2" class="caption" role="heading"><span
+                                            class="caption-text">目录</span></p>
+                                    <ul>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Introduction/index.html">1.课程简介</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Introduction/index.html#id2">本章文本总结</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Guidelines/index.html">2.提示工程关键原则</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Guidelines/index.html#id2">1.原则1-编写清晰具体的指令</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Guidelines/index.html#id7">2.原则2-给模型充足的思考时间</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Guidelines/index.html#id10">3.模型的局限性</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Guidelines/index.html#id11">4.本章文本总结</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Iterative/index.html">3.提示工程需要迭代</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Iterative/index.html#issue-1">3.2 Issue
+                                                    1: 文本过长</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Iterative/index.html#issue-2">3.3 Issue
+                                                    2. 文字关注错误的细节</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Iterative/index.html#issue-3">3.3 Issue
+                                                    3. 描述需要一个规模表</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Summarizing/index.html">4.总结类应用</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Summarizing/index.html#id2">4.1
+                                                    文字总结</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Summarizing/index.html#id3">4.2
+                                                    针对某种信息总结</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Summarizing/index.html#id4">4.3
+                                                    尝试“提取”而不是“总结”</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Summarizing/index.html#id5">4.4
+                                                    针对多项信息总结</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Inferring/index.html">5.推理类应用</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Inferring/index.html#id2">5.1
+                                                    产品评价文本情感分类</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Inferring/index.html#id3">5.2
+                                                    文本情感分类</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Inferring/index.html#id4">5.3
+                                                    文本信息提取</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Inferring/index.html#id5">5.4
+                                                    文本主体推断</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Inferring/index.html#id6">5.5
+                                                    文本信息分析</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Transforming/index.html">6.转换类应用</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Transforming/index.html#id2">6.1
+                                                    翻译任务</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Transforming/index.html#id3">6.2
+                                                    通用翻译器</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Transforming/index.html#id4">6.3
+                                                    语调转换</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Transforming/index.html#id5">6.4
+                                                    格式转换</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Transforming/index.html#id6">6.5
+                                                    语法拼写检查</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Expanding/index.html">7.扩展类应用</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Expanding/index.html#id2">7.1
+                                                    自定义对客户电子邮件的自动答复</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Expanding/index.html#id3">7.2
+                                                    提醒模型使用客户电子邮件中的详细信息</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="Chatbot/index.html">8.打造聊天机器人</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Chatbot/index.html#id2">8.1 对话助手</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="Chatbot/index.html#orderbot">8.2
+                                                    OrderBot</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="Conclusion/index.html">9.课程总结</a>
+                                            <ul class="simple">
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="projects/index.html">10.projects</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="projects/index.html#prompt-useful-list">(1)
+                                                    prompt-useful-list</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="projects/index.html#prompt-projects-list">(2)
+                                                    prompt-projects-list</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="apps/index.html">11.apps</a>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="apps/index.html">12.AI绘画商业变现课</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p><strong>课程章节</strong></p>
+                                <ol class="arabic simple">
+                                    <li><p>课程简介 (Introduction)</p></li>
+                                    <li><p>提示工程关键原则 (Guidelines)</p></li>
+                                    <li><p>提示工程需要迭代 (Iterative)</p></li>
+                                    <li><p>总结类应用 (Summarizing)</p></li>
+                                    <li><p>推理类应用 (Inferring)</p></li>
+                                    <li><p>转换类应用 (Transforming)</p></li>
+                                    <li><p>扩展类应用 (Expanding)</p></li>
+                                    <li><p>打造聊天机器人 (Chatbot)</p></li>
+                                    <li><p>课程总结 (Conclusion)</p></li>
+                                </ol>
+                                <p>这个项目是对于**<a class="reference external"
+                                                      href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/">ChatGPT
+                                    Prompt Engineering for Developers</a><strong>课程的学习笔记整理，这里要感谢</strong>Isa
+                                    Fulford (OpenAI)** 和 <strong>Andrew Ng (DeepLearning.AI)</strong>
+                                    提供的精彩课程，这些内容对于像我一样的初学者提供了很大的帮助，本着学习与实践的想法，做了下面这些事情，希望可以对提示工程学习者起到帮助：
+                                </p>
+                                <ul>
+                                    <li><p>
+                                        1.使用prompt+ChatGPT对课程内容原文进行机器翻译（全文由ChatGPT翻译生成，每一章都提供了中英对照）；</p>
+                                        <img width="917" alt="trans_lan"
+                                             src="https://user-images.githubusercontent.com/59380685/235310208-d447904e-5a19-4f70-a4f9-9f608517acc1.png"
+                                             style="zoom: 50%;">
+                                    </li>
+                                    <li><p>
+                                        2.使用prompt+ChatGPT对笔记内容进行总结与扩展（在每一节的最后，附上了ChatGPT总结的效果）；</p>
+                                        <img width="824" alt="sum_context"
+                                             src="https://user-images.githubusercontent.com/59380685/235310262-b82a8243-3e72-4a12-b36a-ef24206c563e.png"
+                                             style="zoom:50%;">
+                                    </li>
+                                    <li><p>3.整理了实践过程中对应的jupyterbook代码，位置在： <span class="xref myst">jb_code</span>
+                                        （可以在本地化部署环境运行）；</p>
+                                        <img width="1235" alt="jb_code"
+                                             src="https://user-images.githubusercontent.com/59380685/235310289-7f787cfd-2277-4722-97f8-2f30605321f6.png"
+                                             style="zoom:50%;">
+                                    </li>
+                                    <li><p>4.基于notebook代码制作shell的cli命令脚本(更新中)</p>
+                                        <div class="highlight-shell notranslate">
+                                            <div class="highlight"><pre><span></span>python source/cli/cli_py.py --prompt <span
+                                                    class="s2">&quot;hello chatgpt&quot;</span> --model <span
+                                                    class="s2">&quot;gpt-3.5&quot;</span>
+</pre>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <img width="837" alt="gen_code"
+                                     src="https://user-images.githubusercontent.com/59380685/235404063-3b64ae5c-df09-4b3f-a687-5f2b05b005c3.png"
+                                     style="zoom: 67%;">
+                                <img width="755" alt="gen_code1"
+                                     src="https://user-images.githubusercontent.com/59380685/235404104-338eae8f-e170-4b44-a4a3-55005562a179.png"
+                                     style="zoom: 67%;">
+                                <ul>
+                                    <li><p>5.整理了提示工程相关的awesome的项目清单(更新中)：
+                                        https://study.chatgptten.com/projects/index.html</p></li>
+                                    <li><p>6.玩具项目: 引导ChatGPT实现生成<span class="xref myst">tiny-gpt</span>(从零开始实现一个简单的gpt模型)
+                                    </p>
+                                        <ul class="simple">
+                                            <li><p>记录在<a class="reference internal"
+                                                            href="projects/tiny-gpt/tiny-gpt.html"><span
+                                                    class="doc std std-doc">tiny-gpt</span></a></p></li>
+                                        </ul>
+                                        <p><img alt="tiny-gpt"
+                                                src="https://user-images.githubusercontent.com/59380685/236223231-ed5e44d3-7b43-4ab2-a5cd-22e791d4ae28.png"/>
+                                        </p>
+                                    </li>
+                                    <li><p>… …</p></li>
+                                </ul>
+                            </section>
+                            <section id="id3">
+                                <h2>致谢<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+                                <ul class="simple">
+                                    <li><p>https://learn.deeplearning.ai/chatgpt-prompt-eng/</p></li>
+                                    <li><p>https://github.com/openai/openai-cookbook</p></li>
+                                    <li><p>https://github.com/openai/openai-python</p></li>
+                                    <li><p>https://github.com/openai/chatgpt-retrieval-plugin</p></li>
+                                    <li><p>https://learnwithhasan.com/prompt-engineering-guide/</p></li>
+                                </ul>
+                            </section>
+                        </section>
+
+
+                    </article>
+
+
+                    <footer class="bd-footer-article">
+                        <!-- Previous / next buttons -->
+                        <div class="prev-next-area">
+                            <a class="right-next"
+                               href="Introduction/index.html"
+                               title="next page">
+                                <div class="prev-next-info">
+                                    <p class="prev-next-subtitle">next</p>
+                                    <p class="prev-next-title">1.课程简介</p>
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </footer>
+
+                </div>
+
+
+                <div class="bd-sidebar-secondary bd-toc">
+                    <div class="sidebar-secondary-items sidebar-secondary__inner">
+
+                        <div class="sidebar-secondary-item">
+                            <div class="page-toc tocsection onthispage">
+                                <i class="fa-solid fa-list"></i> Contents
+                            </div>
+                            <nav class="bd-toc-nav page-toc">
+                                <ul class="visible nav section-nav flex-column">
+                                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                             href="#id1">介绍</a></li>
+                                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                             href="#id2">主要内容</a></li>
+                                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
+                                                                             href="#id3">致谢</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">介绍</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">主要内容</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">致谢</a></li>
-</ul>
-            </nav>
-        </div>
+            <footer class="bd-footer-content">
+                <div class="bd-footer-content__inner">
+                    <div class="bd-footer-content__inner container">
+
+                        <div class="footer-item">
+
+                            <p class="component-author">
+                                By Junfeng.Hu
+                            </p>
+
+                        </div>
+
+                        <div class="footer-item">
+
+                            <p class="copyright">
+
+                                © Copyright 2023, Junfeng.Hu
+                                <br/>
+
+                            </p>
+
+                        </div>
+
+                        <div class="footer-item">
+
+                        </div>
+
+                        <div class="footer-item">
+
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+
+
+        </main>
     </div>
 </div>
 
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
-  <section id="prompt-engineering-note">
-<h1>prompt-engineering-note<a class="headerlink" href="#prompt-engineering-note" title="Permalink to this heading">#</a></h1>
-<p><img alt="banner" src="https://user-images.githubusercontent.com/59380685/235316290-9a297ce3-ba65-4e66-ae02-f7b62cd42210.png" /></p>
-<hr class="docutils" />
-<p><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/isLinXu/prompt-engineering-note.svg?style=social" /> <img alt="GitHub stars" src="https://img.shields.io/github/stars/isLinXu/prompt-engineering-note.svg?style=social" /> <img alt="GitHub forks" src="https://img.shields.io/github/forks/isLinXu/prompt-engineering-note.svg?style=social" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/isLinXu.svg?style=social" />
-<a class="reference external" href="https://github.com/hujf2/prompt-engineering-note"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fatrox%2Fsync-dotenv%2Fbadge&amp;style=flat" /></a>  <img alt="img" src="https://badgen.net/badge/icon/learning?icon=deepscan&amp;label" /><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/isLinXu/prompt-engineering-note.svg?style=flat-square" /> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/isLinXu/prompt-engineering-note" />  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/isLinXu/prompt-engineering-note" /> <img alt="GitHub" src="https://img.shields.io/github/license/isLinXu/prompt-engineering-note.svg?style=flat-square" /><img alt="img" src="https://hits.dwyl.com/isLinXu/prompt-engineering-note.svg" /></p>
-<ul class="simple">
-<li><p>课程视频 -&gt; <a class="reference external" href="https://www.bilibili.com/video/BV1No4y1t7Zn/"><img alt="bilibili" src="https://img.shields.io/badge/dynamic/json?label=views&amp;style=social&amp;logo=bilibili&amp;query=data.stat.view&amp;url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1vM4y1U7b5" /></a><a class="reference external" href="https://learn.deeplearning.ai/chatgpt-prompt-eng"><img alt="" src="https://img.shields.io/youtube/views/K0SZ9mdygTw?style=social" /></a>(点击图标即可播放)</p></li>
-<li><p>在线阅读 -&gt; <a class="reference external" href="https://study.chatgptten.com/">https://github.com/hujf2/prompt-engineering-note</a></p></li>
-</ul>
-<section id="id1">
-<h2>介绍<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>ChatGPT Prompt Engineering Learning Notesfor Developers (面向开发者的ChatGPT提问工程学习笔记)</p>
-<p>课程简单介绍了语言模型的工作原理，提供了最佳的提示工程实践，并展示了如何将语言模型 API 应用于各种任务的应用程序中。
-此外，课程里面提供了 Jupyter Notebook 代码实例，可以直接使用 OpenAI 提供的 API Key 获得结果，所以没有账号也能够进行体验。</p>
-<p>在ChatGPT Prompt Engineering for Developers 中，能够学习到如何使用大型语言模型 (LLM) 快速构建功能强大的新应用程序。使用 OpenAI API，您将能够快速构建学习创新和创造价值的能力，而这在以前是成本高昂、技术含量高或根本不可能的。</p>
-<p>这个由 <strong>Isa Fulford (OpenAI)</strong> 和 <strong>Andrew Ng (DeepLearning.AI)</strong> 教授的短期课程将描述 LLM 的工作原理，提供即时工程的最佳实践，并展示 LLM API 如何用于各种任务的应用程序，包括：</p>
-<ul class="simple">
-<li><p>总结（例如，为简洁起见总结用户评论）</p></li>
-<li><p>推断（例如，情感分类、主题提取）</p></li>
-<li><p>转换文本（例如，翻译、拼写和语法更正）</p></li>
-<li><p>扩展（例如，自动编写电子邮件）</p></li>
-</ul>
-<p>在这个课程中能够学习到，编写有效提示的两个关键原则，即<strong>如何系统地设计好的提示</strong>，并学习<strong>构建自定义聊天机器人</strong>。</p>
-<p>所有概念都通过大量示例进行说明，可以直接在官方的<a class="reference external" href="https://s172-31-9-165p16067.lab-aws-production.deeplearning.ai/notebooks/">Jupyter notebook环境</a>中使用这些示例，以获得即时工程的实践经验。</p>
-</section>
-<section id="id2">
-<h2>主要内容<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Introduction/index.html">1.课程简介</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Introduction/index.html#id2">本章文本总结</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Guidelines/index.html">2.提示工程关键原则</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Guidelines/index.html#id2">1.原则1-编写清晰具体的指令</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Guidelines/index.html#id7">2.原则2-给模型充足的思考时间</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Guidelines/index.html#id10">3.模型的局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Guidelines/index.html#id11">4.本章文本总结</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Iterative/index.html">3.提示工程需要迭代</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Iterative/index.html#issue-1">3.2 Issue 1: 文本过长</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Iterative/index.html#issue-2">3.3 Issue 2. 文字关注错误的细节</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Iterative/index.html#issue-3">3.3 Issue 3. 描述需要一个规模表</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Summarizing/index.html">4.总结类应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Summarizing/index.html#id2">4.1 文字总结</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Summarizing/index.html#id3">4.2 针对某种信息总结</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Summarizing/index.html#id4">4.3 尝试“提取”而不是“总结”</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Summarizing/index.html#id5">4.4 针对多项信息总结</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Inferring/index.html">5.推理类应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Inferring/index.html#id2">5.1 产品评价文本情感分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inferring/index.html#id3">5.2 文本情感分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inferring/index.html#id4">5.3 文本信息提取</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inferring/index.html#id5">5.4 文本主体推断</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inferring/index.html#id6">5.5 文本信息分析</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Transforming/index.html">6.转换类应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Transforming/index.html#id2">6.1 翻译任务</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transforming/index.html#id3">6.2 通用翻译器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transforming/index.html#id4">6.3 语调转换</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transforming/index.html#id5">6.4 格式转换</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transforming/index.html#id6">6.5 语法拼写检查</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Expanding/index.html">7.扩展类应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Expanding/index.html#id2">7.1 自定义对客户电子邮件的自动答复</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Expanding/index.html#id3">7.2 提醒模型使用客户电子邮件中的详细信息</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Chatbot/index.html">8.打造聊天机器人</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chatbot/index.html#id2">8.1 对话助手</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chatbot/index.html#orderbot">8.2 OrderBot</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Conclusion/index.html">9.课程总结</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="projects/index.html">10.projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="projects/index.html#prompt-useful-list">(1) prompt-useful-list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/index.html#prompt-projects-list">(2) prompt-projects-list</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">11.apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">12.AI绘画商业变现课</a></li>
-</ul>
-</div>
-<p><strong>课程章节</strong></p>
-<ol class="arabic simple">
-<li><p>课程简介 (Introduction)</p></li>
-<li><p>提示工程关键原则 (Guidelines)</p></li>
-<li><p>提示工程需要迭代 (Iterative)</p></li>
-<li><p>总结类应用 (Summarizing)</p></li>
-<li><p>推理类应用 (Inferring)</p></li>
-<li><p>转换类应用 (Transforming)</p></li>
-<li><p>扩展类应用 (Expanding)</p></li>
-<li><p>打造聊天机器人 (Chatbot)</p></li>
-<li><p>课程总结 (Conclusion)</p></li>
-</ol>
-<p>这个项目是对于**<a class="reference external" href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/">ChatGPT Prompt Engineering for Developers</a><strong>课程的学习笔记整理，这里要感谢</strong>Isa Fulford (OpenAI)** 和 <strong>Andrew Ng (DeepLearning.AI)</strong> 提供的精彩课程，这些内容对于像我一样的初学者提供了很大的帮助，本着学习与实践的想法，做了下面这些事情，希望可以对提示工程学习者起到帮助：</p>
-<ul>
-<li><p>1.使用prompt+ChatGPT对课程内容原文进行机器翻译（全文由ChatGPT翻译生成，每一章都提供了中英对照）；</p>
-<img width="917" alt="trans_lan" src="https://user-images.githubusercontent.com/59380685/235310208-d447904e-5a19-4f70-a4f9-9f608517acc1.png" style="zoom: 50%;" >
-</li>
-<li><p>2.使用prompt+ChatGPT对笔记内容进行总结与扩展（在每一节的最后，附上了ChatGPT总结的效果）；</p>
-<img width="824" alt="sum_context" src="https://user-images.githubusercontent.com/59380685/235310262-b82a8243-3e72-4a12-b36a-ef24206c563e.png" style="zoom:50%;" >
-</li>
-<li><p>3.整理了实践过程中对应的jupyterbook代码，位置在： <span class="xref myst">jb_code</span> （可以在本地化部署环境运行）；</p>
-<img width="1235" alt="jb_code" src="https://user-images.githubusercontent.com/59380685/235310289-7f787cfd-2277-4722-97f8-2f30605321f6.png" style="zoom:50%;" >
-</li>
-<li><p>4.基于notebook代码制作shell的cli命令脚本(更新中)</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python source/cli/cli_py.py --prompt <span class="s2">&quot;hello chatgpt&quot;</span> --model <span class="s2">&quot;gpt-3.5&quot;</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<img width="837" alt="gen_code" src="https://user-images.githubusercontent.com/59380685/235404063-3b64ae5c-df09-4b3f-a687-5f2b05b005c3.png" style="zoom: 67%;" >
-<img width="755" alt="gen_code1" src="https://user-images.githubusercontent.com/59380685/235404104-338eae8f-e170-4b44-a4a3-55005562a179.png" style="zoom: 67%;" >
-<ul>
-<li><p>5.整理了提示工程相关的awesome的项目清单(更新中)：
-https://study.chatgptten.com/projects/index.html</p></li>
-<li><p>6.玩具项目: 引导ChatGPT实现生成<span class="xref myst">tiny-gpt</span>(从零开始实现一个简单的gpt模型)</p>
-<ul class="simple">
-<li><p>记录在<a class="reference internal" href="projects/tiny-gpt/tiny-gpt.html"><span class="doc std std-doc">tiny-gpt</span></a></p></li>
-</ul>
-<p><img alt="tiny-gpt" src="https://user-images.githubusercontent.com/59380685/236223231-ed5e44d3-7b43-4ab2-a5cd-22e791d4ae28.png" /></p>
-</li>
-<li><p>… …</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>致谢<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>https://learn.deeplearning.ai/chatgpt-prompt-eng/</p></li>
-<li><p>https://github.com/openai/openai-cookbook</p></li>
-<li><p>https://github.com/openai/openai-python</p></li>
-<li><p>https://github.com/openai/chatgpt-retrieval-plugin</p></li>
-<li><p>https://learnwithhasan.com/prompt-engineering-guide/</p></li>
-</ul>
-</section>
-</section>
-
-
-                </article>
-              
-
-              
-              
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="right-next"
-       href="Introduction/index.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.课程简介</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">介绍</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">主要内容</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">致谢</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By Junfeng.Hu
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2023, Junfeng.Hu
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div></div>
-          </footer>
-        
-
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
 <script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-  <footer class="bd-footer">
-  </footer>
-  </body>
+<footer class="bd-footer">
+</footer>
+</body>
 </html>

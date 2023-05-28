@@ -1,4 +1,4 @@
-#  4.总结类应用
+# 4.总结类应用
 
 ---
 
@@ -21,7 +21,8 @@ There's so much text in today's world, pretty much none of us have enough time t
 You can do this in the Chat GPT Web Interface. I do this all the time to summarise articles so I can just kind of read the content of many more articles than I previously could. And if you want to do this more programmatically, you'll see how to in this lesson. So with that, let's dig into the code to see how you could use this yourself to summarise text. So let's start off with the same starter code as you saw before of importOpenAI, load the API key and here's that getCompletion helper function. 
 ```
 
-你可以在Chat GPT网络界面中完成这项工作。我经常会这样做来总结文章，这样我就可以阅读更多文章的内容，而不仅仅是以前能读的那么少。如果你想以更加机械化的方式实现这一点，你可以在这节课中看到如何做到这一点。所以，让我们深入了解代码，看看你如何使用它来总结文本。因此，让我们从与之前相同的入门代码开始，导入OpenAI，加载API密钥，以及这个getCompletion助手函数。
+你可以在Chat
+GPT网络界面中完成这项工作。我经常会这样做来总结文章，这样我就可以阅读更多文章的内容，而不仅仅是以前能读的那么少。如果你想以更加机械化的方式实现这一点，你可以在这节课中看到如何做到这一点。所以，让我们深入了解代码，看看你如何使用它来总结文本。因此，让我们从与之前相同的入门代码开始，导入OpenAI，加载API密钥，以及这个getCompletion助手函数。
 
 ![4-1](./imgs/4-1.png)
 

@@ -1,4 +1,4 @@
-#  5.推理类应用
+# 5.推理类应用
 
 ---
 
@@ -50,8 +50,6 @@ For a lot of customer support organizations, it's important to understand if a p
 我认为积极情感似乎是正确的答案。现在这个代码将打印出整个句子，即该产品评论的情感是积极的。
 
 ![5-3](./imgs/5-3.png)
-
-
 
 ## 5.2 文本情感分类
 

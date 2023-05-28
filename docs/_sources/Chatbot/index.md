@@ -1,4 +1,4 @@
-#  8.打造聊天机器人
+# 8.打造聊天机器人
 
 ---
 
@@ -21,7 +21,9 @@ One of the exciting things about a large language model is you can use it to bui
 And in this video, you learn how to do that for yourself. I'm going to describe the components of the OpenAI ChatCompletions format in more detail, and then you're going to build a chatbot yourself. So let's get into it. So first, we'll set up the OpenAI Python package as usual. So chat models like ChatGPT are actually trained to take a series of messages as input and return a model-generated message as output. And so although the chat format is designed to make multi-turn conversations like this easy, we've kind of seen through the previous videos that it's also just as useful for single-turn tasks without any conversation.
 ```
 
-在这个视频中，您将学习如何自己做到这一点。我将更详细地描述OpenAI ChatCompletions格式的组件，然后您将自己构建一个聊天机器人。那么让我们开始吧。首先，我们将像往常一样设置OpenAI Python包。聊天模型（如ChatGPT）实际上是被训练成将一系列消息作为输入，并返回由模型生成的消息作为输出。虽然聊天格式旨在使此类多轮对话变得容易，但我们已经通过以前的视频看到，它对于没有对话的单一任务同样有用。
+在这个视频中，您将学习如何自己做到这一点。我将更详细地描述OpenAI
+ChatCompletions格式的组件，然后您将自己构建一个聊天机器人。那么让我们开始吧。首先，我们将像往常一样设置OpenAI
+Python包。聊天模型（如ChatGPT）实际上是被训练成将一系列消息作为输入，并返回由模型生成的消息作为输出。虽然聊天格式旨在使此类多轮对话变得容易，但我们已经通过以前的视频看到，它对于没有对话的单一任务同样有用。
 
 ![1-1](./imgs/8-1.png)
 
@@ -29,7 +31,11 @@ And in this video, you learn how to do that for yourself. I'm going to describe 
  And so next, we're going to kind of define two helper functions. So this is the one that we've been using throughout all the videos, and it's the getCompletion function. But if you kind of look at it, we give a prompt, but then kind of inside the function, what we're actually doing is putting this prompt into what looks like some kind of user message. And this is because the ChatGPT model is a chat model, which means it's trained to take a series of messages as input and then return a model-generated message as output. So the user message is kind of the input, and then the assistant message is the output.
 ```
 
-下一步，我们将定义两个辅助函数。第一个是我们在所有视频中都使用的 getCompletion 函数。但是，如果你仔细看一下，我们给出了一个提示，但实际上在函数内部，我们是将这个提示放置到类似用户消息的消息中。这是因为 ChatGPT 模型是一个聊天模型，意味着它被训练成将一系列消息作为输入，然后返回一个由模型生成的消息作为输出。因此，用户消息是输入，而助手消息是输出。 第二个辅助函数是 generateResponse。这个函数将接受一个用户消息，并生成一个 ChatGPT 模型生成的相应助手消息。 通过这两个函数，我们能够与 AIGPT 模型进行交互并生成对话。
+下一步，我们将定义两个辅助函数。第一个是我们在所有视频中都使用的 getCompletion
+函数。但是，如果你仔细看一下，我们给出了一个提示，但实际上在函数内部，我们是将这个提示放置到类似用户消息的消息中。这是因为
+ChatGPT 模型是一个聊天模型，意味着它被训练成将一系列消息作为输入，然后返回一个由模型生成的消息作为输出。因此，用户消息是输入，而助手消息是输出。
+第二个辅助函数是 generateResponse。这个函数将接受一个用户消息，并生成一个 ChatGPT 模型生成的相应助手消息。 通过这两个函数，我们能够与
+AIGPT 模型进行交互并生成对话。
 
 ![8-1-1](./imgs/8-1-1.png)
 
@@ -39,13 +45,17 @@ And in this video, you learn how to do that for yourself. I'm going to describe 
  So, in this video, we're going to actually use a different helper function, and instead of kind of putting a single prompt as input and getting a single completion, we're going to pass in a list of messages. And these messages can be kind of from a variety of different roles, so I'll describe those. So here's an example of a list of messages. And so, the first message is a system message, which kind of gives an overall instruction, and then after this message, we have kind of turns between the user and the assistant. And this would kind of continue to go on. And if you've ever used ChatGPT, the web interface, then your messages are the user messages, and then ChatGPT's messages are the assistant messages. So the system message helps to kind of set the behaviour and persona of the assistant, and it acts as kind of a high-level instruction for the conversation. 
 ```
 
-在这个视频中，我们将使用一个不同的辅助函数，而不是像以前一样输入一个单独的提示并获取一个完成结果。我们将传入一个消息列表，这些消息可以来自于不同的角色，我将为您描述一下。以下是一个消息列表的示例。第一条消息是系统消息，用于提供整体指示，然后在此消息之后，我们有用户和助手之间的对话。这个对话可以持续进行下去。如果您曾使用 ChatGPT 的 Web 界面，则您的消息是用户消息，而 ChatGPT 的消息是助手消息。系统消息有助于设置助手的行为和角色，并作为对话的高级指令。
+在这个视频中，我们将使用一个不同的辅助函数，而不是像以前一样输入一个单独的提示并获取一个完成结果。我们将传入一个消息列表，这些消息可以来自于不同的角色，我将为您描述一下。以下是一个消息列表的示例。第一条消息是系统消息，用于提供整体指示，然后在此消息之后，我们有用户和助手之间的对话。这个对话可以持续进行下去。如果您曾使用
+ChatGPT 的 Web 界面，则您的消息是用户消息，而 ChatGPT 的消息是助手消息。系统消息有助于设置助手的行为和角色，并作为对话的高级指令。
 
 ```
 So you can kind of think of it as whispering in the assistant's ear and kind of guiding it's responses without the user being aware of the system message. So, as the user, if you've ever used ChatGPT, you probably don't know what's in ChatGPT's system message, and that's kind of the intention. The benefit of the system message is that it provides you, the developer, with a way to kind of frame the conversation without making the request itself part of the conversation. So you can kind of guide the assistant and kind of whisper in its ear and guide its responses without making the user aware. So, now let's try to use these messages in a conversation. So we'll use our new helper function to get the completion from the messages. And we're also using a higher temperature. So the system message says, you are an assistant that speaks like Shakespeare. 
 ```
 
-您可以将其视为向助手耳语并引导其响应，而用户不会注意到系统消息。所以，作为用户，如果您曾经使用过 ChatGPT，您可能不知道 ChatGPT 的系统消息中包含什么，这也是有意的。系统消息的好处是，它为开发者提供了一种在不使请求本身成为对话一部分的情况下，为对话定框架的方式。因此，您可以在不让用户察觉的情况下引导助手并指导它的回复。现在，让我们尝试使用这些消息来进行对话。我们将使用新的辅助函数从这些消息中获取完成结果。同时，我们还使用了更高的温度。系统消息中说，您是一个像莎士比亚一样说话的助手。 因此，在交互中，我们可以使用这个系统消息来影响助手的回复，从而使对话更加自然流畅，同时又避免在对话中插入明显的提示信息。
+您可以将其视为向助手耳语并引导其响应，而用户不会注意到系统消息。所以，作为用户，如果您曾经使用过 ChatGPT，您可能不知道
+ChatGPT
+的系统消息中包含什么，这也是有意的。系统消息的好处是，它为开发者提供了一种在不使请求本身成为对话一部分的情况下，为对话定框架的方式。因此，您可以在不让用户察觉的情况下引导助手并指导它的回复。现在，让我们尝试使用这些消息来进行对话。我们将使用新的辅助函数从这些消息中获取完成结果。同时，我们还使用了更高的温度。系统消息中说，您是一个像莎士比亚一样说话的助手。
+因此，在交互中，我们可以使用这个系统消息来影响助手的回复，从而使对话更加自然流畅，同时又避免在对话中插入明显的提示信息。
 
 ## 8.1 对话助手
 
@@ -53,7 +63,8 @@ So you can kind of think of it as whispering in the assistant's ear and kind of 
 So this is us kind of describing to the assistant how it should behave. And then the first user message is, tell me a joke. The next is, why did the chicken cross the road? And then the final user message is, I don't know. So if we run this, the response is to get to the other side. Let's try again. To get to the other side, faire so, madame, tis an olden classic that never fails. So there's our Shakespearean response. And let's actually try one more thing, because I want to make it even clearer that this is the assistant message. So here, let's just go and print the entire message response. So, just to make this even clearer, uhm, this response is an assistant message. So, the role is assistant and then the content is the message itself. So, that's what's happening in this helper function. We're just kind of passing out the content of the message. now let's do another example. 
 ```
 
-这是我们告诉助手它应该如何行事。然后，第一个用户消息是“告诉我一个笑话”。接下来的消息是“为什么小鸡过马路？”最后一个用户消息是“我不知道”。如果我们运行这个程序，响应是“为了到达另一边”。让我们再试一次。为了到达另一边，夫人，请原谅，这是一个永不过时的经典。这就是我们的莎士比亚式回应。让我们再尝试一件事，因为我想让它更清晰，这是助手的消息。因此，让我们将整个消息响应打印出来。为了使这更清晰，这个响应是一条助手消息。因此，角色是助手，内容是消息本身。这就是这个辅助函数中发生的事情。现在让我们做另一个例子。 在这个例子中，我们将使用 getCompletion 函数来发送一条系统消息和一个用户消息，然后获取助手的响应。
+这是我们告诉助手它应该如何行事。然后，第一个用户消息是“告诉我一个笑话”。接下来的消息是“为什么小鸡过马路？”最后一个用户消息是“我不知道”。如果我们运行这个程序，响应是“为了到达另一边”。让我们再试一次。为了到达另一边，夫人，请原谅，这是一个永不过时的经典。这就是我们的莎士比亚式回应。让我们再尝试一件事，因为我想让它更清晰，这是助手的消息。因此，让我们将整个消息响应打印出来。为了使这更清晰，这个响应是一条助手消息。因此，角色是助手，内容是消息本身。这就是这个辅助函数中发生的事情。现在让我们做另一个例子。
+在这个例子中，我们将使用 getCompletion 函数来发送一条系统消息和一个用户消息，然后获取助手的响应。
 
 ![8-1-2](./imgs/8-1-2.png)
 
@@ -64,7 +75,6 @@ So, here our messages are, uhm, the assistant message is, you're a friendly chat
 这里，我们的信息有两条，一条是助手的信息：你是一个友好的聊天机器人，另一条信息是用户的第一条反馈：嗨，我的名字是伊莎。我们想要获取用户的第一条信息。所以，让我们执行一下第一条助手信息。第一条反馈是：你好伊莎，很高兴见到你。你今天需要我的帮助吗？现在，让我们尝试另一个例子。这里我们的信息还是有两条，一条是系统信息：你是一个友好的聊天机器人，另一条信息是第一条用户反馈：是的，你能提醒我我的名字是什么吗？我们想要得到回应。然而，你会发现，这个模型实际上还不知道我的名字。所以，每一次与语言模型的交互都是独立的。这意味着，在当前的交互中，你必须提供所有相关的信息，供模型从中获取。如果你想让模型在交互中从先前的对话中获取信息，你必须将之前的对话作为输入提供给模型，我们称之为“上下文”。
 
 ![8-1-2](./imgs/8-1-3.png)
-
 
 ![8-1](./imgs/8-3.png)
 
@@ -124,7 +134,9 @@ And this is great because we kind of asked the assistant in the system message t
 And you could also use a user message here, this does not have to be a system message. So let's execute this. And notice in this case we're using a lower temperature because for these kinds of tasks we want the output to be fairly predictable. For a conversational agent you might want to use a higher temperature, however in this case I would maybe use a lower temperature as well because for a customer's assistant chatbot you might want the output to be a bit more predictable as well. And so here we have the summary of our order and so we could submit this to the order system if we wanted to. 
 ```
 
-你也可以在这里使用用户消息，这不一定是一个系统消息。所以让我们执行一下。请注意，在这种情况下，我们使用了一个较低的温度，因为对于这些任务，我们希望输出相当可预测。对于一个会话代理，你可能想要使用一个更高的**温度**，但在这种情况下，我也可能使用一个较低的**温度**，因为对于客户助手聊天机器人，你可能也希望输出看起来更可预测。所以在这里我们有我们订单的摘要，如果我们想的话，我们可以将它提交给订单系统。
+你也可以在这里使用用户消息，这不一定是一个系统消息。所以让我们执行一下。请注意，在这种情况下，我们使用了一个较低的温度，因为对于这些任务，我们希望输出相当可预测。对于一个会话代理，你可能想要使用一个更高的
+**温度**，但在这种情况下，我也可能使用一个较低的**温度**
+，因为对于客户助手聊天机器人，你可能也希望输出看起来更可预测。所以在这里我们有我们订单的摘要，如果我们想的话，我们可以将它提交给订单系统。
 
 ![8-2-6](./imgs/8-2-7.png)
 

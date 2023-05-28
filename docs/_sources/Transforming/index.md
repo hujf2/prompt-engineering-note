@@ -21,7 +21,8 @@ Large language models are very good at transforming its input to a different for
 Yeah, I use Chat GPT to proofread pretty much everything I write these days, so I'm excited to show you some more examples in the notebook now. So first we'll import OpenAI and also use the same getCompletion helper function that we've been using throughout the videos. 
 ```
 
-是的，我现在基本上会使用 Chat GPT 来校对我所写的每一篇文章，所以现在我很高兴向您展示更多 Notebook 中的例子。所以首先我们将导入 OpenAI 并使用相同的 getCompletion 帮助函数，这是我们在视频中一直在使用的。
+是的，我现在基本上会使用 Chat GPT 来校对我所写的每一篇文章，所以现在我很高兴向您展示更多 Notebook 中的例子。所以首先我们将导入
+OpenAI 并使用相同的 getCompletion 帮助函数，这是我们在视频中一直在使用的。
 
 ![6-1](./imgs/6-1.png)
 
@@ -37,7 +38,9 @@ And the first thing we'll do is a translation task. So large language models are
 So let's start off with something simple. So in this first example, the prompt is translate the following English text to Spanish. Hi, I would like to order a blender. And the response is Hola, me gustaría ordenar una licuadora. And I'm very sorry to all of you Spanish speakers. I never learned Spanish, unfortunately, as you can definitely tell. OK, let's try another example. So in this example, the prompt is, tell me what language this is. And then this is in French, Combien coûte la lampe d'air. And so let's run this. And the model has identified that this is French. 
 ```
 
-让我们从一些简单的例子开始。在第一个例子中，提示是将以下英文文本翻译成西班牙语。 Hi，我想订购一个搅拌机。回复是Hola，me gustaría ordenar una licuadora。非常抱歉，对于所有的西班牙语使用者，我从未学过西班牙语，您肯定已经注意到了。好的，让我们再试一个例子。在此例中，提示是告诉我这是什么语言。然后，这是法语，Combien coûte la lampe d'air。让我们运行一下。模型已经确定这是法语。
+让我们从一些简单的例子开始。在第一个例子中，提示是将以下英文文本翻译成西班牙语。 Hi，我想订购一个搅拌机。回复是Hola，me
+gustaría ordenar una licuadora。非常抱歉，对于所有的西班牙语使用者，我从未学过西班牙语，您肯定已经注意到了。好的，让我们再试一个例子。在此例中，提示是告诉我这是什么语言。然后，这是法语，Combien
+coûte la lampe d'air。让我们运行一下。模型已经确定这是法语。
 
 ![6-1](./imgs/6-2.png)
 
@@ -55,7 +58,9 @@ The model can also do multiple translations at once. So in this example, let's s
 So in some languages, the translation can change depending on the speaker's relationship to the listener. And you can also explain this to the language model. And so it will be able to kind of translate accordingly. So in this example, we say, translate the following text to Spanish in both the formal and informal forms. Would you like to order a pillow? And also notice here, we're using a different delimiter than these backticks. It doesn't really matter as long as it's kind of a clear separation. So, here we have the formal and informal. So, formal is when you're speaking to someone who's kind of maybe senior to you or you're in a professional situation. That's when you use a formal tone and then informal is when you're speaking to maybe a group of friends. I don't actually speak Spanish but my dad does and he says that this is correct. 
 ```
 
-因此，在某些语言中，翻译可能会根据说话者与听众的关系而发生变化。您可以向语言模型解释这一点，因此它将能够相应地进行翻译。所以在这个例子中，我们说，将以下文本翻译成西班牙语，适用于正式和非正式形式。Would you like to order a pillow？在这里请注意，我们使用不同的定界符，而不是这些反引号。只要它们是清晰的分隔符，实际上并不重要。所以，我们有正式和非正式形式。正式形式是当您与地位可能高于您的人交谈或处于专业情境时使用的语气，而非正式形式是当您与朋友交谈时使用的语气。我实际上不会讲西班牙语，但是我爸爸会，他说这是正确的。
+因此，在某些语言中，翻译可能会根据说话者与听众的关系而发生变化。您可以向语言模型解释这一点，因此它将能够相应地进行翻译。所以在这个例子中，我们说，将以下文本翻译成西班牙语，适用于正式和非正式形式。Would
+you like to order a
+pillow？在这里请注意，我们使用不同的定界符，而不是这些反引号。只要它们是清晰的分隔符，实际上并不重要。所以，我们有正式和非正式形式。正式形式是当您与地位可能高于您的人交谈或处于专业情境时使用的语气，而非正式形式是当您与朋友交谈时使用的语气。我实际上不会讲西班牙语，但是我爸爸会，他说这是正确的。
 
 ## 6.3 语调转换
 
@@ -63,7 +68,9 @@ So in some languages, the translation can change depending on the speaker's rela
 So, for the next example, we're going to pretend that we're in charge of a multinational e-commerce company and so the user messages are going to be in all different languages and so users are going to be telling us about their IT issues in a wide variety of languages. So, we need a universal translator. So, first we'll just paste in a list of user messages in a variety of different languages and now we will loop through each of these user messages. So, for issue in user messages and then I'm going to copy over this slightly longer code block. And so, the first thing we'll do is ask the model to tell us what language the issue is in. So, here's the prompt. Then we'll print out the original message's language and the issue and then we'll ask the model to translate it into English and Korean. So, let's run this. So, the original message in French. 
 ```
 
-因此，接下来的例子中，我们将假设自己是一家跨国电子商务公司的负责人，用户留言将会是各种不同的语言，因此用户将用各种不同的语言告诉我们其 IT 问题。所以，我们需要一个通用翻译器。首先，我们将粘贴一份使用各种不同语言的用户留言列表，现在我们将循环遍历这些用户留言。对于留言集中的问题，我要复制一下稍长的代码块。因此，我们首先将询问模型告诉我们留言所使用的是哪种语言，然后我们将打印出原始留言的语言和问题，并要求模型将其翻译成英文和韩文。接下来，运行这个程序，原始留言是用法语写的。
+因此，接下来的例子中，我们将假设自己是一家跨国电子商务公司的负责人，用户留言将会是各种不同的语言，因此用户将用各种不同的语言告诉我们其
+IT
+问题。所以，我们需要一个通用翻译器。首先，我们将粘贴一份使用各种不同语言的用户留言列表，现在我们将循环遍历这些用户留言。对于留言集中的问题，我要复制一下稍长的代码块。因此，我们首先将询问模型告诉我们留言所使用的是哪种语言，然后我们将打印出原始留言的语言和问题，并要求模型将其翻译成英文和韩文。接下来，运行这个程序，原始留言是用法语写的。
 
 ![6-1](./imgs/6-4.png)
 
@@ -109,7 +116,6 @@ And this is a really kind of popular use for chatGPT. I highly recommend doing t
 And so here are some examples of some kind of common grammar and spelling problems and how the language model can help address these. So I'm going to paste in a list of sentences that have some kind of grammatical or spelling errors. And then we're going to loop through each of these sentences. And ask the model to proofread these. Proofread and correct. And then we'll use some delimiters. And then we will get the response and print it as usual. And so the model is able to correct all of these grammatical errors. 
 ```
 
-
 下面是一些普遍的语法和拼写问题的例子以及语言模型如何帮助解决这些问题。我们将复制一些具有语法或拼写错误的句子列表，然后逐一循环这些句子。请模型校对和纠正这些错误。然后我们将使用一些分隔符。我们将得到响应并像往常一样进行打印。因此，该模型能够纠正所有这些语法错误。
 
 ![6-1](./imgs/6-6-1.png)
@@ -126,7 +132,8 @@ We could use some of the techniques that we've discussed before. So to improve t
 It's always useful to check your text before you post it in a public forum. And so we'll go through an example of checking a review. And so here is a review about a stuffed panda. And so we're going to ask the model to proofread and correct the review. Great. So we have this corrected version. And one cool thing we can do is find the kind of differences between our original review and the model's output. So we're going to use this RedLines Python package to do this. And we're going to get the diff between the original text of our review and the model output and then display this. And so here you can see the diff between the original review and the model output and the kind of things that have been corrected. 
 ```
 
-在发布到公共论坛之前检查文本始终是有用的。所以我们将通过一个检查评论的例子来说明。这是关于一只填充pandas的评论。我们要求模型检查和校正评论。很好。我们有了这个更正的版本。我们可以做的很酷的一件事是找到原始评论和模型输出之间的差异。所以我们将使用RedLines Python包来做这件事。我们将得到我们评论的原始文本和模型输出之间的差异，然后显示它。因此，在这里，您可以看到原始评论和模型输出之间的差异以及已经被更正的内容。
+在发布到公共论坛之前检查文本始终是有用的。所以我们将通过一个检查评论的例子来说明。这是关于一只填充pandas的评论。我们要求模型检查和校正评论。很好。我们有了这个更正的版本。我们可以做的很酷的一件事是找到原始评论和模型输出之间的差异。所以我们将使用RedLines
+Python包来做这件事。我们将得到我们评论的原始文本和模型输出之间的差异，然后显示它。因此，在这里，您可以看到原始评论和模型输出之间的差异以及已经被更正的内容。
 
 ![6-1](./imgs/6-6-3.png)
 

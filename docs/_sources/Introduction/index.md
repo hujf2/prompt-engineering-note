@@ -15,7 +15,10 @@ chatgpt prompt：请帮我用中文进行全文翻译下面这段英文，并结
 Welcome to this course on ChatGPT prompt engineering for developers. I'm thrilled to have with me Isa Fulford to teach this along with me. She is a member of the technical staff of OpenAI and had built the popular ChatGPT retrieval plugin and a large part of the work has been teaching people how to use LLM or large language model technology in products. She's also contributed to the OpenAI cookbook that teaches people prompting. So thrilled to have you with you. And I'm thrilled to be here and share some prompting best practices with you all. So there's been a lot of material on the internet for prompting with articles like 30 prompts everyone has to know A lot of that has been focused on the ChatGPT web user interface Which many people are using to do specific and often one-off tasks But I think the power of LLM large language models as a developer to that is using API calls to LLM To quickly build software applications. I think that is still very underappreciated In fact, my team at AI Fund, which is a sister company to DeepLearning.AI Has been working with many startups on applying these technologies to many different applications And it's been exciting to see what LLM APIs can enable developers to very quickly build So in this course, we'll share with you some of the possibilities for what you can do As well as best practices for how you can do them There's a lot of material to cover. 
 ```
 
-欢迎来到这门针对开发者的AIGPT提示工程课程。我很高兴能够与Isa Fulford一起授课。她是OpenAI的技术团队成员，她开发了流行的AIGPT检索插件，同时也教授人们如何在产品中使用LLM或大型语言模型技术，也为OpenAI食谱做出贡献。我很高兴能和她一起授课。同时我也很高兴在这里与大家分享一些提示最佳实践。实际上，关于提示已经有了很多互联网上的材料，例如“30个人人都必须知道的提示”。很多焦点都放在了AIGPT的Web版界面上，这使得很多人只用于完成特定的任务，而且经常是一次性的。但我认为，LLM大型语言模型作为一名开发人员的强大之处在于使用API调用LLM快速构建软件应用程序。实际上，AI Fund在我的团队与DeepLearning.AI的姊妹公司合作，为很多创业公司应用这些技术到许多不同的应用领域，看到LLM API可以使开发人员非常快速地构建应用程序实属令人兴奋。因此，在这门课程中，我们将与您分享一些您可以做到什么的可能性，以及如何最佳实践地完成这些任务。有很多要涵盖的内容。
+欢迎来到这门针对开发者的AIGPT提示工程课程。我很高兴能够与Isa
+Fulford一起授课。她是OpenAI的技术团队成员，她开发了流行的AIGPT检索插件，同时也教授人们如何在产品中使用LLM或大型语言模型技术，也为OpenAI食谱做出贡献。我很高兴能和她一起授课。同时我也很高兴在这里与大家分享一些提示最佳实践。实际上，关于提示已经有了很多互联网上的材料，例如“30个人人都必须知道的提示”。很多焦点都放在了AIGPT的Web版界面上，这使得很多人只用于完成特定的任务，而且经常是一次性的。但我认为，LLM大型语言模型作为一名开发人员的强大之处在于使用API调用LLM快速构建软件应用程序。实际上，AI
+Fund在我的团队与DeepLearning.AI的姊妹公司合作，为很多创业公司应用这些技术到许多不同的应用领域，看到LLM
+API可以使开发人员非常快速地构建应用程序实属令人兴奋。因此，在这门课程中，我们将与您分享一些您可以做到什么的可能性，以及如何最佳实践地完成这些任务。有很多要涵盖的内容。
 
 ![1](./imgs/1.png)
 
@@ -47,7 +50,9 @@ So the way that instruction tuned LLMs are typically trained is You start off wi
 But for most practical applications today, we would recommend most people instead focus on instruction tuned LLMs Which are easier to use and also because of the work of OpenAI and other LLM companies becoming safer and more aligned So this course will focus on best practices for instruction tuned LLMs Which is what we recommend you use for most of your applications Before moving on, I just want to acknowledge the team from OpenAI and DeepLearning.ai that had contributed to the materials That Izzy and I will be presenting. I'm very grateful to Andrew Main, Joe Palermo, Boris Power, Ted Sanders, and Lillian Weng from OpenAI They were very involved with us brainstorming materials, vetting the materials to put together the curriculum for this short course And I'm also grateful on the deep learning side for the work of Geoff Ladwig, Eddy Shyu, and Tommy Nelson
 ```
 
-对于大多数今天的实际应用，我们建议大多数人应该专注于经过调整的指令语言模型。这些模型更易于使用，而且由于OpenAI和其他LLM公司的工作，它们变得更加安全和更加符合要求。因此，本课程将专注于经过调整的指令语言模型的最佳实践，这是我们建议大多数应用程序使用的模型。在继续之前，我只想感谢OpenAI和DeepLearning.ai团队为我们提供的材料做出的贡献。我非常感谢OpenAI的Andrew Main、Joe Palermo、Boris Power、Ted Sanders和Lillian Weng。他们与我们一起进行了头脑风暴，对材料进行了审核，为这个短期课程的课程设置拼凑了课程计划。我也感谢深度学习方面Geoff Ladwig、Eddy Shyu和Tommy Nelson的工作。
+对于大多数今天的实际应用，我们建议大多数人应该专注于经过调整的指令语言模型。这些模型更易于使用，而且由于OpenAI和其他LLM公司的工作，它们变得更加安全和更加符合要求。因此，本课程将专注于经过调整的指令语言模型的最佳实践，这是我们建议大多数应用程序使用的模型。在继续之前，我只想感谢OpenAI和DeepLearning.ai团队为我们提供的材料做出的贡献。我非常感谢OpenAI的Andrew
+Main、Joe Palermo、Boris Power、Ted Sanders和Lillian Weng。他们与我们一起进行了头脑风暴，对材料进行了审核，为这个短期课程的课程设置拼凑了课程计划。我也感谢深度学习方面Geoff
+Ladwig、Eddy Shyu和Tommy Nelson的工作。
 
 ![1](./imgs/2.png)
 
@@ -56,8 +61,6 @@ So when you use an instruction tuned LLMs, think of giving instructions to anoth
 ```
 
 因此，当您使用经过调整的指令语言模型时，请考虑给另一个人指示。比如说一个聪明但不了解任务细节的人。那么当LLMs不能工作时，有时是因为指令不够清晰。例如，如果您要说，请为我写一些关于艾伦·图灵的东西。除此之外，明确您希望文本集中讨论他的科学工作、个人生活、在历史中的角色或其他相关事项可能会有所帮助。如果您指定文本要呈现的语气，它应该采用类似专业新闻记者所写的语气呢？还是更像一封简短的随笔，希望LLMs生成您所要求的内容？当然，如果你想象自己要求一个刚拿到大学毕业证的人为你执行这个任务，你甚至可以提前指定他们应该阅读哪几段文本以撰写关于艾伦·图灵的文本，这会进一步为他们成功执行您的此项任务做好准备。在下一个视频中，您将看到如何清晰明确、具体，这是提示LLMs的一个重要原则。您还将学习第二个提示原则：给LLMs时间思考。所以，让我们继续下一个视频。
-
-
 
 ## 本章文本总结
 
